@@ -1,0 +1,341 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ClarityAI  - AI Assistant untuk Konsultasi dan cek katarak</title>
+    
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+
+    <!-- JavaScript -->
+    <script src="{{ url_for('static', filename='js/main.js') }}"></script>
+    
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/styles2.css') }}">
+
+</head>
+<body>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg fixed-top">
+        <div class="container">
+            <a class="navbar-brand" href="#">
+                <i class="fas fa-shield-virus"></i>
+                ClarityAI 
+            </a>
+            
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link active" href="#home">Beranda</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#features">Fitur</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#stats">Statistik</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="{{ url_for('chatbot') }}" class="btn btn-primary">
+                            <i class="fas fa-comment-medical me-2"></i>Konsultasi
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="hero-shape"></div>
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-6">
+                    <div class="hero-content">
+                        <div class="badge-container">
+                            <span class="badge">
+                                <i class="fas fa-star-half-alt"></i>
+                                AI Powered Assistant
+                            </span>
+                        </div>
+                        <h1>AI Assistant untuk Konsultasi dan Cek <span class="text-gradient">Mata Katarak</span></h1>
+                        <p>
+                            ClarityAI hadir sebagai asisten AI yang membantu Anda mengidentifikasi 
+                            dan berkonsultasi terkait Mata Katarak dengan cepat dan akurat.
+                        </p>
+                        <div class="hero-buttons">
+                            <a href="{{ url_for('chatbot') }}" class="btn btn-primary">
+                                <i class="fas fa-comment-medical me-2"></i>
+                                Mulai Konsultasi
+                            </a>
+                            <a href="#features" class="btn btn-outline">
+                                <i class="fas fa-info-circle me-2"></i>
+                                Pelajari Lebih Lanjut
+                            </a>
+                        </div>
+                        <div class="hero-stats">
+                            <div class="stat-item">
+                                <h4>100K+</h4>
+                                <p>Pengguna Aktif</p>
+                            </div>
+                            <div class="stat-divider"></div>
+                            <div class="stat-item">
+                                <h4>99%</h4>
+                                <p>Tingkat Akurasi</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <div class="hero-image-container">
+                        <div class="hero-image">
+                            <img src="static/img/otak.gif" alt="MosquitoGuard AI">
+                        </div>
+                        <div class="floating-card card-1">
+                            <i class="fas fa-robot"></i>
+                            <span>AI Assistant</span>
+                        </div>
+                        <div class="floating-card card-2">
+                            <i class="fas fa-shield-virus"></i>
+                            <span>Protection</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section id="features" class="features">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-lg-6">
+                    <div class="section-header text-center">
+                        <div class="badge-container">
+                            <span class="badge">
+                                <i class="fas fa-star"></i>
+                                Keunggulan Kami
+                            </span>
+                        </div>
+                        <h2>Fitur Unggulan</h2>
+                        <p>Solusi komprehensif untuk kesehatan Anda</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="features-grid">
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-robot"></i>
+                    </div>
+                    <h3>AI Assistant 24/7</h3>
+                    <p>
+                        Konsultasi kapan saja dengan asisten AI yang selalu siap membantu 
+                        memberikan informasi akurat.
+                    </p>
+                    <a href="#" class="feature-link">
+                        Pelajari <i class="fas fa-arrow-right"></i>
+                    </a>
+                </div>
+
+                <div class="feature-card featured">
+                    <div class="feature-icon">
+                        <i class="fas fa-database"></i>
+                    </div>
+                    <h3>Database Lengkap</h3>
+                    <p>
+                        Informasi komprehensif tentang demam berdarah dari sumber-sumber 
+                        terpercaya dan terverifikasi.
+                    </p>
+                    <a href="#" class="feature-link">
+                        Pelajari <i class="fas fa-arrow-right"></i>
+                    </a>
+                </div>
+
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-chart-line"></i>
+                    </div>
+                    <h3>Analisis Akurat</h3>
+                    <p>
+                        Analisis gejala yang akurat dengan teknologi AI terkini untuk 
+                        rekomendasi penanganan yang tepat.
+                    </p>
+                    <a href="#" class="feature-link">
+                        Pelajari <i class="fas fa-arrow-right"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Stats Section -->
+    <section id="stats" class="stats">
+        <div class="stats-shape"></div>
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-6">
+                    <div class="stats-content">
+                        <div class="badge-container">
+                            <span class="badge">
+                                <i class="fas fa-chart-bar"></i>
+                                Statistik
+                            </span>
+                        </div>
+                        <h2>Pencapaian Kami</h2>
+                        <p>
+                            Komitmen kami dalam memberikan layanan terbaik telah menghasilkan 
+                            dampak positif bagi masyarakat.
+                        </p>
+                        <div class="stats-grid">
+                            <div class="stat-card">
+                                <div class="stat-icon">
+                                    <i class="fas fa-users"></i>
+                                </div>
+                                <h3>100K+</h3>
+                                <p>Pengguna Aktif</p>
+                            </div>
+                            <div class="stat-card">
+                                <div class="stat-icon">
+                                    <i class="fas fa-clock"></i>
+                                </div>
+                                <h3>24/7</h3>
+                                <p>Layanan Non-Stop</p>
+                            </div>
+                            <div class="stat-card">
+                                <div class="stat-icon">
+                                    <i class="fas fa-check-circle"></i>
+                                </div>
+                                <h3>99%</h3>
+                                <p>Tingkat Akurasi</p>
+                            </div>
+                            <div class="stat-card">
+                                <div class="stat-icon">
+                                    <i class="fas fa-heart"></i>
+                                </div>
+                                <h3>98%</h3>
+                                <p>Kepuasan Pengguna</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <div class="stats-image">
+                        <img src="static/img/stats.gif" alt="Statistics">
+                        <div class="stats-card">
+                            <div class="stats-chart">
+                                <!-- Placeholder for chart -->
+                            </div>
+                            <div class="stats-info">
+                                <h4>Tingkat Akurasi</h4>
+                                <p>Meningkat 25% tahun ini</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-shape"></div>
+        <div class="container">
+            <div class="footer-top">
+                <div class="row">
+                    <div class="col-lg-4">
+                        <div class="footer-brand">
+                            <i class="fas fa-shield-virus"></i>
+                            <span>ClarityAI</span>
+                        </div>
+                        <p class="footer-desc">
+                            AI Assistant untuk konsultasi dan cek mata katarak yang didukung 
+                            teknologi artificial intelligence terkini.
+                        </p>
+                        <div class="social-links">
+                            <a href="#" class="social-link">
+                                <i class="fab fa-facebook-f"></i>
+                            </a>
+                            <a href="#" class="social-link">
+                                <i class="fab fa-twitter"></i>
+                            </a>
+                            <a href="#" class="social-link">
+                                <i class="fab fa-instagram"></i>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="col-lg-2">
+                        <h5>Menu</h5>
+                        <ul class="footer-links">
+                            <li><a href="#home">Beranda</a></li>
+                            <li><a href="#features">Fitur</a></li>
+                            <li><a href="#stats">Statistik</a></li>
+                            <li><a href="#consultation">Konsultasi</a></li>
+                        </ul>
+                    </div>
+                    <div class="col-lg-3">
+                        <h5>Kontak</h5>
+                        <ul class="footer-links">
+                            <li>
+                                <i class="fas fa-envelope"></i>
+                                <a href="mailto:info@mosquitoguard.com">info@ClarityAI.com</a>
+                            </li>
+                            <li>
+                                <i class="fas fa-phone"></i>
+                                <a href="tel:+6281234567890">+62 812-3456-7890</a>
+                            </li>
+                            <li>
+                                <i class="fas fa-map-marker-alt"></i>
+                                Sorong, Indonesia
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="col-lg-3">
+                        <h5>Newsletter</h5>
+                        <p>Dapatkan update terbaru dari kami</p>
+                        <form class="newsletter-form">
+                            <div class="input-group">
+                                <input type="email" class="form-control" placeholder="Email address">
+                                <button class="btn btn-primary" type="submit">
+                                    <i class="fas fa-paper-plane"></i>
+                                </button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <div class="row align-items-center">
+                    <div class="col-md-6">
+                        <p>&copy; 2025 ClarityAI. All rights reserved.</p>
+                    </div>
+                    <div class="col-md-6">
+                        <ul class="footer-legal">
+                            <li><a href="#">Privacy Policy</a></li>
+                            <li><a href="#">Terms of Service</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    
+    <!-- Custom JS -->
+    <script src="{{ url_for('static', filename='js/main.js') }}"></script>
+        
+</body>
+</html>

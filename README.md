@@ -44,8 +44,8 @@ ClarityAI is an intelligent medical chatbot system that combines natural languag
 
 1. Clone the repository:
 ```bash
-git clone https://github.com/yourusername/clarity-ai.git
-cd clarity-ai
+git clone https://github.com/Elfaria-Wistoria/ClarityAI.git
+cd ClarityAI
 ```
 
 2. Create and activate virtual environment:
@@ -109,9 +109,9 @@ MODEL_PATH=path_to_your_model
 
 This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
 
-## 👥 Authors
+## 👥 Author
 
-- Your Name - *Initial work* - [YourGithub](https://github.com/yourusername)
+- Edwinsyah - *Initial work* - [Elfaria-Wistoria](https://github.com/Elfaria-Wistoria)
 
 ## 🙏 Acknowledgments
 
@@ -121,7 +121,7 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 
 ## 📞 Support
 
-For support, email edwinsyah23032003@gmail.com or open an issue in the repository.
+For support, please open an issue in the repository: [ClarityAI Issues](https://github.com/Elfaria-Wistoria/ClarityAI/issues)
 
 ---
 Made with ❤️ for better eye health care accessibility
